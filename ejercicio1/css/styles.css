@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #1abc9c;
+    height: 150px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    align-items: center;
+    display: flex;
+    height: inherit;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-title {
+    color: white;
+    font-size: x-large;
+}
+
+.header-nav > ul > li {
+    display: inline-block;
+    font-size: large;
+    margin: 0 10px;
+}
+
+.header-nav > ul > li > a {
+    color: white;
+}
+
+footer {
+    background-color: #2f2f2f;
+    color: white;
+    height: 150px;
+}
+
+footer a {
+    color: green;
+}
+
+li {
+    
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.mihistoria {
+    margin-left: 200px;
+}
