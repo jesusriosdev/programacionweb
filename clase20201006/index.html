@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" type="image/x-icon" href="">
+</head>
+<body>
+
+  <h1>Forms</h1>
+  <form action="funcion()">
+
+    <div>
+      <label for="name">Ingresa nombre:</label>
+      <input id="name" type="text">
+    </div>
+    
+    <div>
+      <label for="">Eres estudiante?</label>
+      <input type="checkbox">
+    </div>
+
+    <div>
+      <label for="">Ingresa password:</label>
+      <input type="password">
+    </div>
+
+    <div>
+      <label for="">Que lenguaje de programacion manejas mejor?</label>
+      <input type="radio" name="progra">C#
+      <input type="radio" name="progra">Java
+      <input type="radio" name="progra">Python
+      <input type="radio" name="progra">Javascript
+    </div>
+
+
+    <div>
+      <label>Zona</label>
+      <div>
+          <div class="form-check form-check-inline">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-success active">
+                      <input type="radio" name="inlineRadioOptions2" id="inlineRadio21" checked> No fumadores
+                  </label>
+                  <label class="btn btn-danger">
+                      <input type="radio" name="inlineRadioOptions2" id="inlineRadio22" > Fumadores
+                  </label>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div>
+      <label for="">Fecha</label>
+      <input type="date">
+      <input type="time">
+    </div>
+
+    <div>
+      <label for="">Contacto a traves de: </label>
+      <select name="" id="">
+        <option value="1">Telefono</option>
+        <option value="2">Correo</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="">Comentarios?</label>
+      <textarea name="" id="" rows="10"></textarea>
+    </div>
+
+    <button type="submit">
+      Enviar
+    </button>
+  </form>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
