@@ -21,8 +21,8 @@ app.use((req, res, next) => {
 
 const dataPath = "server/data/persons.json";
 
-const readFile = (callback, returnJson = false) => {
-	fs.readFile(dataPath, "utf8", (err, data) => {
+const readFile = (callback, returnJson = false, filePath) => {
+	fs.readFile(filePath, "utf8", (err, data) => {
 		if (err) {
 			throw err;
 		}
@@ -31,8 +31,8 @@ const readFile = (callback, returnJson = false) => {
 	});
 };
 
-const writeFile = (fileData, callback) => {
-	fs.writeFile(dataPath, fileData, "utf8", (err) => {
+const writeFile = (fileData, callback, filePath) => {
+	fs.writeFile(filePath, fileData, "utf8", (err) => {
 		if (err) {
 			throw err;
 		}
@@ -46,20 +46,28 @@ app.get("/hello", (req, res) => {
 });
 
 app.get("/persons", (req, res) => {
-	readFile((data) => {
-		res.status(200).send(data);
-	}, true);
+	readFile(
+		(data) => {
+			res.status(200).send(data);
+		},
+		true,
+		dataPath
+	);
 });
 
 app.post("/addperson", (req, res) => {
-	readFile((data) => {
-		const position = Object.keys(data).length; // 5
-		data[position] = req.body;
+	readFile(
+		(data) => {
+			const position = Object.keys(data).length; // 5
+			data[position] = req.body;
 
-		writeFile(JSON.stringify(data, null, 2), () => {
-			res.status(200).send("a new person has been added..");
-		});
-	}, true);
+			writeFile(JSON.stringify(data, null, 2), () => {
+				res.status(200).send("a new person has been added..");
+			});
+		},
+		true,
+		dataPath
+	);
 });
 
 server.listen(8080, () => {
