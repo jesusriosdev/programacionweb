@@ -1,0 +1,9 @@
+To run apps with https on kestrel:
+dotnet dev-certs https --trust
+
+To create an app:
+dotnet new mvc -o AppNameHere
+
+Entity Framework Core:
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer

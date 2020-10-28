@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TestApp.Models
 {
-    public class UserViewModel
+    public class PersonViewModel
     {
         public string FirstName { get; set; }
 

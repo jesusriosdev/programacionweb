@@ -30,7 +30,7 @@ namespace TestApp.Controllers
 
         public IActionResult TestView()
         {
-            var model = new UserViewModel();
+            var model = new PersonViewModel();
             model.FirstName = "Jesus";
             model.LastName = "Rios";
             model.Age = 29;
