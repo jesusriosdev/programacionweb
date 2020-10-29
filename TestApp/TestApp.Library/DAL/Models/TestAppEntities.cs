@@ -17,15 +17,6 @@ namespace TestApp.Library.DAL.Models
 
         public virtual DbSet<Persons> Persons { get; set; }
 
-//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-//                optionsBuilder.UseSqlServer("Data Source=sql5097.site4now.net;Initial Catalog=DB_A49E03_testapp;user id=DB_A49E03_testapp_admin;password=testapp123456789");
-//            }
-//        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Persons>(entity =>
