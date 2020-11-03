@@ -1,0 +1,19 @@
+﻿@model TestApp.Library.DAL.Models.Users
+
+<h1>Edit User</h1>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="user_id" />
+    <input type="hidden" asp-for="password" />
+    <input type="hidden" asp-for="is_active" />
+    <input type="hidden" asp-for="created_at" />
+
+    <input asp-for="first_names" type="text" placeholder="First Name" />
+    <input asp-for="last_names" type="text" placeholder="Last Name" />
+    <input asp-for="email" type="email" placeholder="Email" />
+
+    <input type="submit" class="btn btn-success" value="Save" />
+</form>
+
+<a asp-action="Index">Back to list</a>

@@ -15,10 +15,47 @@ namespace TestApp.Library.DAL.Models
         {
         }
 
+        public virtual DbSet<Cars_Luis> Cars_Luis { get; set; }
+        public virtual DbSet<Cars_Yair> Cars_Yair { get; set; }
         public virtual DbSet<Persons> Persons { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Cars_Luis>(entity =>
+            {
+                entity.HasKey(e => e.car_id);
+
+                entity.Property(e => e.created_at).HasColumnType("datetime");
+
+                entity.Property(e => e.make)
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.model)
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Cars_Yair>(entity =>
+            {
+                entity.HasKey(e => e.car_id);
+
+                entity.Property(e => e.created_at)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.is_active).HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.make)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.model)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<Persons>(entity =>
             {
                 entity.HasKey(e => e.person_id);
@@ -42,6 +79,38 @@ namespace TestApp.Library.DAL.Models
                     .HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.last_names)
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Users>(entity =>
+            {
+                entity.HasKey(e => e.user_id);
+
+                entity.Property(e => e.created_at)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.email)
+                    .IsRequired()
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.first_names)
+                    .IsRequired()
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.is_active)
+                    .IsRequired()
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.last_names)
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.password)
+                    .IsRequired()
                     .HasMaxLength(150)
                     .IsUnicode(false);
             });
