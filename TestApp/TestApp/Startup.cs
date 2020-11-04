@@ -24,6 +24,14 @@ namespace TestApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(15);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             services.AddDbContext<Library.DAL.Models.TestAppEntities>(options => 
@@ -49,6 +57,8 @@ namespace TestApp
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

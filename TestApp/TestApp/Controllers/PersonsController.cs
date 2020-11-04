@@ -11,7 +11,7 @@ using TestApp.Library.DAL.Models;
 
 namespace TestApp.Controllers
 {
-    public class PersonsController : Controller
+    public class PersonsController : BaseController
     {
         private readonly TestAppEntities _ctx;
 

@@ -11,7 +11,7 @@ using TestApp.Library.DAL.Models;
 
 namespace TestApp.Controllers
 {
-    public class UsersController : Controller
+    public class UsersController : BaseController
     {
         private readonly TestAppEntities _ctx;
 
@@ -38,12 +38,14 @@ namespace TestApp.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var model = await Users.GetItem(_ctx, id);
+            model.isActive = model.is_active ?? false;
             return View(model);
         }
 
         [HttpPost]
         public async Task<IActionResult> Edit(Users model)
         {
+            model.is_active = model.isActive;
             var result = await Users.Update(_ctx, model);
 
             return RedirectToAction("Index");

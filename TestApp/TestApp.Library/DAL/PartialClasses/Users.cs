@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using TestApp.Library.DAL.Models;
@@ -11,6 +12,9 @@ namespace TestApp.Library.DAL.Models
     [MetadataType(typeof(UserMetadata))]
     public partial class Users
     {
+        //return this.is_active ?? false;
+        [NotMapped]
+        public bool isActive { get; set; }
         public string FullName { get { return $"{this.first_names} {this.last_names}"; } }
 
         public static async Task<List<Users>> GetList(TestAppEntities ctx)
