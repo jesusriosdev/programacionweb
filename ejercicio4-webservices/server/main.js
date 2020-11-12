@@ -20,6 +20,7 @@ app.use((req, res, next) => {
 });
 
 const dataPath = "server/data/persons.json";
+const dataPath2 = "server/data/cars.json";
 
 const readFile = (callback, returnJson = false, filePath) => {
 	fs.readFile(filePath, "utf8", (err, data) => {
@@ -52,6 +53,16 @@ app.get("/persons", (req, res) => {
 		},
 		true,
 		dataPath
+	);
+});
+
+app.get("/cars", (req, res) => {
+	readFile(
+		(data) => {
+			res.status(200).send(data);
+		},
+		true,
+		dataPath2
 	);
 });
 

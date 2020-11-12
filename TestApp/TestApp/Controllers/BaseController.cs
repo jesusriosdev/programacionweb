@@ -15,15 +15,14 @@ namespace TestApp.Controllers
 
         }
 
-        public override void OnActionExecuting(ActionExecutingContext context)
-        {
-            SessionViewModel sessionObject = HttpContext.Session.GetJson<SessionViewModel>("SessionObject") ?? new SessionViewModel();
-            if(sessionObject == null || sessionObject.UserId == 0)
-            {
-                HttpContext.Session.Clear();
-                context.Result = RedirectToAction(nameof(SessionController.Login), "Session");
-            }
-            //base.OnActionExecuting(context);
-        }
+        //public override void OnActionExecuting(ActionExecutingContext context)
+        //{
+        //    SessionViewModel sessionObject = HttpContext.Session.GetJson<SessionViewModel>("SessionObject") ?? new SessionViewModel();
+        //    if(sessionObject == null || sessionObject.UserId == 0)
+        //    {
+        //        HttpContext.Session.Clear();
+        //        context.Result = RedirectToAction(nameof(SessionController.Login), "Session");
+        //    }
+        //}
     }
 }

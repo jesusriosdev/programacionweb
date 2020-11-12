@@ -7,6 +7,12 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<p class="text-right">
-    <label>Month number:</label> @DateTime.Now.Month
-</p>
+<div class="text-center">
+    <a target="_blank" asp-action="DownloadFile">Download file</a>
+</div>
+<div class="text-center">
+    @if(ViewBag.ErrorMessage != null)
+    {
+        <label class="text-danger">@ViewBag.ErrorMessage</label>
+    }
+</div>
