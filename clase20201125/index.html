@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SIMON DICE</title>
+
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+
+		<div id="modal-result" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h1 id="result-text"></h1>
+			</div>
+		</div>
+
+		<header>
+			<h1>SIMON DICE</h1>
+		</header>
+
+		<section class="start-game-container">
+			<button id="start-game-button" onclick="init()">Iniciar</button>
+		</section>
+
+		<section class="info-container">
+			<div class="info">
+				<div class="info-score">Puntaje: 0</div>
+				<div class="info-instruction"></div>
+			</div>
+		</section>
+
+		<section class="board-container">
+			<div class="board">
+				<div class="quadrant q-one" data-key="1" onclick="playerClick(1)"></div>
+				<div class="quadrant q-two" data-key="2" onclick="playerClick(2)"></div>
+				<div class="quadrant q-three" data-key="3" onclick="playerClick(3)"></div>
+				<div class="quadrant q-four" data-key="4" onclick="playerClick(4)"></div>
+			</div>
+		</section>
+
+		<section class="credits-container">
+			<div>
+				Desarrollado por:
+				<a href="/">Autor</a>
+			</div>
+        </section>
+        
+        <audio data-key="1" src="sounds/clap.wav"></audio>
+        <audio data-key="2" src="sounds/hihat.wav"></audio>
+        <audio data-key="3" src="sounds/kick.wav"></audio>
+        <audio data-key="4" src="sounds/openhat.wav"></audio>
+
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
