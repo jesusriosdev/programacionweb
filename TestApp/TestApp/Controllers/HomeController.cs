@@ -55,9 +55,9 @@ namespace TestApp.Controllers
         {
             // Descargar archivo.
             var filesPath = Path.Combine(_hostingEnvironment.ContentRootPath, "customfiles");
-            
-            //var fileToDelete = Path.Combine(filesPath, "3.pdf");
-            //System.IO.File.Delete(fileToDelete);
+
+            var fileToDelete = Path.Combine(filesPath, "3.pdf");
+            System.IO.File.Delete(fileToDelete);
 
             filesPath += "/5.pdf";
 
