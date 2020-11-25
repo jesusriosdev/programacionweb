@@ -10,5 +10,6 @@ namespace TestApp.Models
         public int UserId { get; set; }
         public string FirstNames { get; set; }
         public string LastNames { get; set; }
+        public bool ShowPersonMenu { get; set; }
     }
 }

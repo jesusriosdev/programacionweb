@@ -35,11 +35,13 @@ namespace TestApp.Controllers
             {
                 // Todo salio bien, crear sesion.
 
+                var now = DateTime.Now;
                 var sessionObject = new SessionViewModel()
                 {
                     UserId = result.Item1.user_id,
                     FirstNames = result.Item1.first_names,
-                    LastNames = result.Item1.last_names
+                    LastNames = result.Item1.last_names,
+                    ShowPersonMenu = (now > DateTime.Now.Date.AddHours(8) && now < DateTime.Now.Date.AddHours(22))
                 };
 
                 HttpContext.Session.SetJson("SessionObject", sessionObject);
