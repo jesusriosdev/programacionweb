@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 
+import api from "../api";
+
 class BadgeNew extends React.Component {
 	state = {
 		form: {
@@ -26,7 +28,42 @@ class BadgeNew extends React.Component {
 		});
 	};
 
+	handleSubmit = async (e) => {
+		e.preventDefault();
+		
+		this.setState({
+			loading: true,
+			error: null,
+		});
+
+		try {
+			await api.badges.create(this.state.form);
+			this.setState({
+				loading: false,
+			});
+
+			this.props.history.push("/badges");
+		} catch (error) {
+			this.setState({
+				loading: false,
+				error: error,
+			});
+		}
+
+		// this.setState({
+		// 	form: {
+		// 		...this.state.form,
+		// 		[e.target.name]: e.target.value,
+		// 	},
+		// });
+	};
+
 	render() {
+		
+		if (this.state.loading === true) {
+			return <h1>Cargando..</h1>;
+		}
+
 		return (
 			<div>
 				<div className="BadgeNew__hero">
@@ -47,10 +84,11 @@ class BadgeNew extends React.Component {
 						</div>
 
 						<div className="col-6">
-              <BadgeForm
+							<BadgeForm
 								onChange={this.handleChange}
+								onSubmit={this.handleSubmit}
 								formValues={this.state.form}
-              />
+							/>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,47 @@
+{
+  "badges": [
+    {
+      "id": "63c03386-33a2-4512-9ac1-354ad7bec5e9",
+      "firstName": "Daphney",
+      "lastName": "Torphy",
+      "email": "Ron61@hotmail.com",
+      "jobTitle": "National Markets Officer",
+      "twitter": "DaphneyTorphy96105",
+      "avatarUrl": "https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon"
+    },
+    {
+      "id": "a9748581-dfdc-4a78-930d-5205a2ccef48",
+      "firstName": "Tatyana",
+      "lastName": "Von",
+      "email": "Herminio.Schmeler@hotmail.com",
+      "jobTitle": "Central Branding Representative",
+      "twitter": "TatyanaVon35871-3686",
+      "avatarUrl": "https://www.gravatar.com/avatar/98c382edd93414c1649b9db866000f97?d=identicon"
+    },
+    {
+      "id": "a9748582-dfdc-4a78-930d-5205a2ccef48",
+      "firstName": "Tatyana",
+      "lastName": "Von",
+      "email": "Herminio.Schmeler@hotmail.com",
+      "jobTitle": "Central Branding Representative",
+      "twitter": "TatyanaVon35871-3686",
+      "avatarUrl": "https://www.gravatar.com/avatar/98c382edd93414c1649b9db866000f97?d=identicon"
+    },
+    {
+      "firstName": "Jesus",
+      "lastName": "Rios",
+      "email": "jesus_rios91@hotmail.com",
+      "jobTitle": "Software Engineer",
+      "twitter": "jesusriosdev",
+      "id": "G-1U2BK"
+    },
+    {
+      "firstName": "Jose",
+      "lastName": "Reyes",
+      "email": "jose_reyes@hotmail.com",
+      "jobTitle": "Database Manager",
+      "twitter": "josereyes1111",
+      "id": "eFXoDsU"
+    }
+  ]
+}
