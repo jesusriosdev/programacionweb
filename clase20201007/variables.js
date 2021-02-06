@@ -17,4 +17,3 @@ var person = {
     name: "Jesus",
     age: 29
 }
-

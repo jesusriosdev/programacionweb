@@ -14,7 +14,7 @@ if(age === 18) {
 }
 
 // ternary
-//condition ? true : false;
+var esMayor = (age >= 18) ? true : false;
 
 var numero = 1;
 var result = numero === 1 ? "soy uno" : "no, no soy uno";

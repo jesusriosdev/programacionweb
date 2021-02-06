@@ -11,11 +11,11 @@ bluetooth
 usb
 ethernet
 fibra optica
-muchos cables
+un monton cables
 satelites
 barcos
 
-no mas nubesitas
+no hay nubesitas
 internet no funciona con satelites, no todo al menos
 
 PC > TWITTER
@@ -112,51 +112,3 @@ PARA RECORDAR DATOS SE CREAN COOKIES QUE VAN PEGADAS EN CADA REQUEST Y RESPONSE
 COOKIES SON NOMBRE=VALOR
 SE LLAMAN ASI POR LAS GALLETAS DE LA FORTUNA, QUE TRAEN UN MENSAJE ADENTRO
 SON PESADAS, POR LO QUE SU USO DEBE DE MODERARSE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

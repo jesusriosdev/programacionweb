@@ -1,7 +1,7 @@
 // Primitive values
 
 // Number
-40
+40 651685165
 
 // String
 "texto"
@@ -17,7 +17,7 @@ undefined
 // Object values
 
 // Arrays
-[1,2,3]
+[1,2,"smgfb", true]
 
 { name: "Jesus" }
 

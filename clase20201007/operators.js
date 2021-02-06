@@ -28,3 +28,5 @@ a || b // only one must be true
 var age = 40;
 age++;
 age += 5;
+age -= 5;
+age *=4;
